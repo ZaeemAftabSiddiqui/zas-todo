@@ -1,10 +1,11 @@
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
-import Nav from "react-bootstrap/Nav";
-import Form from "react-bootstrap/Form";
 import Navbar from "react-bootstrap/Navbar";
+import Form from "react-bootstrap/Form";
+import Nav from "react-bootstrap/Nav";
+import PropTypes from "prop-types";
 
-function Header(props) {
+export default function Header(props) {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -33,5 +34,12 @@ function Header(props) {
     </Navbar>
   );
 }
+Header.defaultProps = {
+  title: " Your title here ",
+  // searchBar: true,
+};
 
-export default Header;
+Header.propTypes = {
+  title: PropTypes.string,
+  searchBar: PropTypes.bool.isRequired,
+};
