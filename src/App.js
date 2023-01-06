@@ -8,7 +8,7 @@ import Footer from "./Components/Footer";
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Header title="My Todos List" searchBar={true} />
       <Todos />
       <Footer />
     </div>
