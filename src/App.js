@@ -22,7 +22,12 @@ function App() {
   };
   const addTodo = (title, desc) => {
     console.log("I am adding this todo", title, desc);
-    let sno = todos[todos.length - 1].sno + 1;
+    let sno;
+    if (todos.length === 0) {
+      sno = 1;
+    } else {
+      sno = todos[todos.length - 1].sno + 1;
+    }
     const myTodo = {
       sno: sno,
       title: title,
