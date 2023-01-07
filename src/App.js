@@ -1,4 +1,5 @@
 import "./App.css";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import Header from "./Components/Header";
@@ -6,7 +7,19 @@ import Todos from "./Components/Todos";
 import Footer from "./Components/Footer";
 
 function App() {
-  let todos = [
+  const onDelete = (todo) => {
+    console.log("I am on delete o todo", todo);
+    // Deleting this way in react does not work
+    // let index = todos.indexOf(todo)
+    // todos.splice(index,1 )
+
+    setTodos(
+      todos.filter((e) => {
+        return e !== todo;
+      })
+    );
+  };
+  const [todos, setTodos] = useState([
     {
       sno: 1,
       title: "Go to the market",
@@ -22,11 +35,11 @@ function App() {
       title: "Go to the mall",
       desc: "You need to go to the mall to get vegetables ",
     },
-  ];
+  ]);
   return (
     <div className="App">
       <Header title="My Todos List" searchBar={false} />
-      <Todos todos={todos} />
+      <Todos todos={todos} onDelete={onDelete} />
       <Footer />
     </div>
   );

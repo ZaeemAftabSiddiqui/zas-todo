@@ -7,9 +7,17 @@ const Todos = (props) => {
     <div>
       <Container>
         <h3>Todos List</h3>
-        {props.todos.map((todo) => {
-          return <TodoItems todo={todo} />;
-        })}
+        {props.todos.length === 0
+          ? "No todos display"
+          : props.todos.map((todo) => {
+              return (
+                <TodoItems
+                  todo={todo}
+                  key={todo.sno}
+                  onDelete={props.onDelete}
+                />
+              );
+            })}
       </Container>
     </div>
   );
