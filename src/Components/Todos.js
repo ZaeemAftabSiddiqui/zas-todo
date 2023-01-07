@@ -3,8 +3,12 @@ import Container from "react-bootstrap/Container";
 import TodoItems from "./TodoItems";
 
 const Todos = (props) => {
+  let myStyle = {
+    minHeight: "100vh",
+    margin: "40px auto",
+  };
   return (
-    <div>
+    <div style={myStyle}>
       <Container>
         <h3>Todos List</h3>
         {props.todos.length === 0

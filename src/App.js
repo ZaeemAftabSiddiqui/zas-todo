@@ -28,6 +28,7 @@ function App() {
       title: title,
       desc: desc,
     };
+    setTodos([...todos, myTodo]);
     console.log(myTodo);
   };
   const [todos, setTodos] = useState([
