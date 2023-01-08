@@ -6,6 +6,8 @@ import Header from "./Components/Header";
 import Todos from "./Components/Todos";
 import Footer from "./Components/Footer";
 import AddTodo from "./Components/AddTodo";
+import About from "./Components/About";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   let initTodo;
@@ -50,12 +52,25 @@ function App() {
   }, [todos]);
 
   return (
-    <div className="App">
+    <Router>
       <Header title="My Todos List" searchBar={false} />
-      <AddTodo addTodo={addTodo} />
-      <Todos todos={todos} onDelete={onDelete} />
+      <div className="App">
+        <Routes>
+          <Route
+            exact
+            path="/"
+            element={
+              <>
+                <AddTodo addTodo={addTodo} />
+                <Todos todos={todos} onDelete={onDelete} />
+              </>
+            }
+          />
+          <Route exact path="/about" element={<About />} />
+        </Routes>
+      </div>
       <Footer />
-    </div>
+    </Router>
   );
 }
 
