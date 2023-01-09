@@ -18,7 +18,6 @@ function App() {
   }
 
   const onDelete = (todo) => {
-    console.log("I am on delete o todo", todo);
     // Deleting this way in react does not work
     // let index = todos.indexOf(todo)
     // todos.splice(index,1 )
@@ -31,7 +30,6 @@ function App() {
     localStorage.setItem("todos", JSON.stringify(todos));
   };
   const addTodo = (title, desc) => {
-    console.log("I am adding this todo", title, desc);
     let sno;
     if (todos.length === 0) {
       sno = 1;
@@ -44,7 +42,6 @@ function App() {
       desc: desc,
     };
     setTodos([...todos, myTodo]);
-    console.log(myTodo);
   };
   const [todos, setTodos] = useState(initTodo);
   useEffect(() => {
