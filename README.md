@@ -1,3 +1,54 @@
+# ZAS Todo App
+
+A web application for creating and managing to-do lists, built using React.js and react-bootstrap.
+
+## Features
+
+- Create and delete tasks
+- Responsive design for mobile devices
+- tasks store in local storage 
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+- Node.js (v14.0.0 or later)
+- npm (v6.14.5 or later)
+
+### Installation
+
+1. Clone the repository
+```bash
+git clone https://github.com/ZaeemAftabSiddiqui/zas-todo
+
+    Install the dependencies
+
+npm install
+
+    Start the development server
+
+npm start
+
+    Open http://localhost:3000 in your browser to see the app
+
+Deployment
+
+The app is ready to be deployed to a hosting service of your choice.
+```
+# Built With
+
+   -	JavaScript - used for adding interactivity and dynamic functionality to web pages
+-	React - JavaScript library for building user interfaces
+-	React-Bootstrap - responsive front-end framework for building mobile-friendly websites
+
+    
+License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+
 # Contact Us
 
 If you have any questions or concerns, please feel free to contact us at [email zaeemaftabsiddiqui@gmail.com]. Our customer service team is available 24/7 to assist you.
