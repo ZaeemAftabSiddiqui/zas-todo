@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/zas-todo/static/css/main.756af292.css",
+    "main.js": "/zas-todo/static/js/main.7b344157.js",
+    "static/js/787.18cc04da.chunk.js": "/zas-todo/static/js/787.18cc04da.chunk.js",
+    "index.html": "/zas-todo/index.html",
+    "main.756af292.css.map": "/zas-todo/static/css/main.756af292.css.map",
+    "main.7b344157.js.map": "/zas-todo/static/js/main.7b344157.js.map",
+    "787.18cc04da.chunk.js.map": "/zas-todo/static/js/787.18cc04da.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.756af292.css",
+    "static/js/main.7b344157.js"
+  ]
+}
